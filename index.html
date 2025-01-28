@@ -49,15 +49,17 @@
       cursor: pointer;
     }
     #bottomMessage {
-      bottom: 5%; /* Added more spacing from the bottom */
+      bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 28px; /* Reduced font size */
+      font-size: 28px; /* Reduced font size for smaller space */
       color: yellow;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.8);
       pointer-events: none;
+      text-align: center; /* Center-align text */
+      line-height: 1.5; /* Add spacing between lines */
     }
 
     /* Adjusting for smaller screen sizes (like iPhone) */
@@ -82,8 +84,8 @@
       }
 
       #bottomMessage {
-        font-size: 20px; /* Smaller font for small screens */
-        bottom: 8%; /* Spacing remains consistent */
+        font-size: 22px; /* Smaller font for small screens */
+        bottom: 8%; /* Adjusted spacing from the bottom */
       }
     }
 
@@ -110,7 +112,7 @@
   <div id="middleMessage">举杯同庆</div>
   <div id="leftMessage">波屯迎新春</div>
   <div id="rightMessage">家乡年夜饭</div>
-  <div id="bottomMessage">李福双携家人给您拜年啦</div>
+  <div id="bottomMessage">李福双携家人<br>给您拜年啦</div>
   <canvas id="fireworksCanvas"></canvas>
   <script>
     const canvas = document.getElementById("fireworksCanvas");
