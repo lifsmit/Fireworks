@@ -16,7 +16,7 @@
     #middleMessage {
       position: absolute;
       color: yellow;
-      font-size: 36px;
+      font-size: 48px; /* Same size as other messages */
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       pointer-events: none;
@@ -26,7 +26,7 @@
       transform: translateX(-50%);
       padding: 10px;
     }
-    #leftMessage, #rightMessage {
+    #leftMessage, #rightMessage, #bottomMessage {
       position: absolute;
       font-size: 48px;
       color: yellow;
@@ -48,13 +48,21 @@
       writing-mode: vertical-rl;
       cursor: pointer;
     }
-    #middleMessage {
-      cursor: pointer;
+    #bottomMessage {
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 36px;
+      color: yellow;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.8);
+      pointer-events: none;
     }
 
     /* Adjusting for smaller screen sizes (like iPhone) */
     @media (max-width: 768px) {
-      #leftMessage, #rightMessage {
+      #leftMessage, #rightMessage, #bottomMessage {
         font-size: 36px; /* Smaller font for small screens */
         top: 25%; /* Position them a bit higher */
         height: 200px; /* Adjust height */
@@ -69,8 +77,13 @@
       }
 
       #middleMessage {
-        font-size: 24px; /* Smaller font for smaller screens */
+        font-size: 36px; /* Smaller font for smaller screens */
         top: 5%;
+      }
+
+      #bottomMessage {
+        font-size: 28px; /* Smaller font for small screens */
+        bottom: 5%;
       }
     }
 
@@ -82,8 +95,13 @@
       }
 
       #middleMessage {
-        font-size: 20px; /* Smaller middle text */
+        font-size: 24px; /* Smaller middle text */
         top: 3%;
+      }
+
+      #bottomMessage {
+        font-size: 20px; /* Further reduce font size */
+        bottom: 5%;
       }
     }
   </style>
@@ -92,6 +110,7 @@
   <div id="middleMessage">举杯同庆</div>
   <div id="leftMessage">波屯迎新春</div>
   <div id="rightMessage">家乡年夜饭</div>
+  <div id="bottomMessage">李福双携家人给您拜年啦</div>
   <canvas id="fireworksCanvas"></canvas>
   <script>
     const canvas = document.getElementById("fireworksCanvas");
@@ -212,6 +231,7 @@
     document.getElementById("leftMessage").addEventListener("touchstart", handleTouchEvent);
     document.getElementById("rightMessage").addEventListener("touchstart", handleTouchEvent);
     document.getElementById("middleMessage").addEventListener("touchstart", handleTouchEvent);
+    document.getElementById("bottomMessage").addEventListener("touchstart", handleTouchEvent);
 
     setInterval(() => addFirework(Math.random() * (canvas.width - 300), canvas.height - 50, Math.random() * (canvas.height / 2)), 800);
     animate();
