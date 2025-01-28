@@ -38,18 +38,18 @@
     }
     #leftMessage {
       top: 35%;
-      left: 25%; /* Adjust the left message's position to the left */
+      left: 25%; /* Adjusted to the left */
       writing-mode: vertical-rl;
       cursor: pointer;
     }
     #rightMessage {
       top: 35%;
-      right: 25%; /* Adjust the right message's position to the left */
+      right: 25%; /* Adjusted to the left */
       writing-mode: vertical-rl;
       cursor: pointer;
     }
     #bottomMessage {
-      bottom: 5%;
+      bottom: 10%; /* Added more spacing from the bottom */
       left: 50%;
       transform: translateX(-50%);
       font-size: 36px;
@@ -64,7 +64,7 @@
     @media (max-width: 768px) {
       #leftMessage, #rightMessage, #bottomMessage {
         font-size: 36px; /* Smaller font for small screens */
-        top: 25%; /* Position them a bit higher */
+        top: 25%; /* Position messages a bit higher */
         height: 200px; /* Adjust height */
       }
 
@@ -83,7 +83,7 @@
 
       #bottomMessage {
         font-size: 28px; /* Smaller font for small screens */
-        bottom: 5%;
+        bottom: 8%; /* Adjusted spacing from the bottom */
       }
     }
 
@@ -101,7 +101,7 @@
 
       #bottomMessage {
         font-size: 20px; /* Further reduce font size */
-        bottom: 5%;
+        bottom: 8%; /* Spacing remains consistent */
       }
     }
   </style>
@@ -220,9 +220,8 @@
       }
     }
 
-    // Ensure the touch event is properly handled on mobile devices
     function handleTouchEvent(e) {
-      e.preventDefault(); // Prevent default behavior (scrolling, zooming, etc.)
+      e.preventDefault();
       const x = e.touches[0].clientX;
       const y = e.touches[0].clientY;
       triggerSuperFireworks(x, y);
