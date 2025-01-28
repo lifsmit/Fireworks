@@ -49,25 +49,25 @@
       cursor: pointer;
     }
     #bottomMessage {
-      bottom: 5%;
+      bottom: 2%; /* Moved close to the bottom */
       left: 50%;
       transform: translateX(-50%);
-      font-size: 28px; /* Reduced font size for smaller space */
+      font-size: 22px; /* Smaller font size for fitting */
       color: yellow;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       text-shadow: 2px 2px 5px rgba(255, 255, 0, 0.8);
       pointer-events: none;
       text-align: center; /* Center-align text */
-      line-height: 1.5; /* Add spacing between lines */
+      line-height: 1.5; /* Space between lines */
     }
 
     /* Adjusting for smaller screen sizes (like iPhone) */
     @media (max-width: 768px) {
-      #leftMessage, #rightMessage, #bottomMessage {
+      #leftMessage, #rightMessage {
         font-size: 36px; /* Smaller font for small screens */
-        top: 25%; /* Position messages a bit higher */
-        height: 200px; /* Adjust height */
+        top: 25%;
+        height: 200px;
       }
 
       #leftMessage {
@@ -84,8 +84,8 @@
       }
 
       #bottomMessage {
-        font-size: 22px; /* Smaller font for small screens */
-        bottom: 8%; /* Adjusted spacing from the bottom */
+        font-size: 18px; /* Smaller font for small screens */
+        bottom: 3%; /* Adjusted spacing from the bottom */
       }
     }
 
@@ -102,8 +102,8 @@
       }
 
       #bottomMessage {
-        font-size: 18px; /* Further reduce font size */
-        bottom: 8%; /* Adjusted spacing from the bottom */
+        font-size: 16px; /* Further reduce font size */
+        bottom: 3%; /* Adjusted spacing from the bottom */
       }
     }
   </style>
